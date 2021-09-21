@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head> <link rel="stylesheet" href="css/style2.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My project</title>
+</head>
+<body>
+    <header class="header"> 
+        <h1 class="header__title" id="sozdatel">Работу создал: <br>Белобородова Анастасия</h1></header> <br>
+          <div class="form">
+      <form action="#" id="form" class="form_body">
+          <h2 class="form_title"> Свяжись со мной</h2>
+          <div class="form_item">
+      <label form="formName" class="form_label">Имя*</label>
+      <input id="formName" type="text" name="name" class="form_input">
+      </div>
+      <div class="form_item">
+          <label form="formEmail" class="form_label">E-mail*</label>
+          <input id="formEmail" type="email" name="Email" class="form_input">
+      </div>
+      <div class="form_item">
+          <label form="formMessage" class="form_label">Сообщение</label>
+          <textarea name="Message" id="formMessage" class="form_input" ></textarea>
+      </div>
+      <div class="form_button">
+        <button type="submit" class="form_button" onclick='showMessage()'>Отправить</button>
+  </div>
+  
+  </form>
+
+      <script>
+      function showMessage(){
+          alert('Имя:'+''+ document.querySelector("#formName").value+ '    '+
+          'Email:'+''+
+          document.querySelector("#formEmail").value +'      '+
+          "Текст:"+
+         document.querySelector("#formMessage").value ),
+      alert("Успешно отправлено");
+  }
+  
+  console.log (document.querySelector("#formName"), document.querySelector("#formEmail"),
+  document.querySelector("#formMessage"));
+
+  document.addEventListener('submit', (e) => { 
+// Отключаем событие по умолчанию 
+    e.prevent.Default(); 
+// Очищаем поля формы 
+    e.target.reset(); 
+});
+  </script>
+      </div>
+      </div>  
+</body>
+</html>
