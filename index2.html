@@ -31,24 +31,19 @@
   </form>
 
       <script>
-      function showMessage(){
-          alert('Имя:'+''+ document.querySelector("#formName").value+ '    '+
-          'Email:'+''+
-          document.querySelector("#formEmail").value +'      '+
-          "Текст:"+
-         document.querySelector("#formMessage").value ),
-      alert("Успешно отправлено");
-  }
-  
-  console.log (document.querySelector("#formName"), document.querySelector("#formEmail"),
-  document.querySelector("#formMessage"));
+  function ShowMessage(){
+let Name = document.querySelector("#formName").value;
+let Email = document.querySelector("#formEmail").value;
+let Info = document.querySelector("#formMessage").value;
 
-  document.addEventListener('submit', (e) => { 
-// Отключаем событие по умолчанию 
-    e.prevent.Default(); 
-// Очищаем поля формы 
-    e.target.reset(); 
-});
+alert('Имя:'+' '+ Name + '\n' +
+'Email:'+' '+ Email +'\n'+
+"Текст:"+ Info );
+
+console.log(Name, Email, Info);
+
+alert(" Успешно отправлено");
+}
   </script>
       </div>
       </div>  
